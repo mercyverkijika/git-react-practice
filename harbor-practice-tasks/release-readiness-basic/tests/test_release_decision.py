@@ -11,16 +11,18 @@ def test_decision_is_not_ready():
     assert "NOT_READY" in content, "The decision must be NOT_READY"
 
 
-def test_mentions_failed_payment_test():
+def test_mentions_failed_payment_integration_test():
     content = Path("release_decision.md").read_text().lower()
-    assert "payment" in content
-    assert "failed" in content
+    assert "payment" in content, "The output must mention payment evidence"
+    assert "integration" in content, "The output must mention the integration test context"
+    assert "failed" in content, "The output must state that the payment integration test failed"
 
 
-def test_mentions_open_blocker_issue():
+def test_mentions_specific_open_blocker_issue():
     content = Path("release_decision.md").read_text().lower()
-    assert "blocker" in content
-    assert "open" in content
+    assert "issue-127" in content, "The output must mention ISSUE-127"
+    assert "blocker" in content, "The output must mention that ISSUE-127 is a blocker"
+    assert "open" in content, "The output must mention that ISSUE-127 is open"
 
 
 def test_mentions_checklist_rule():
@@ -31,3 +33,9 @@ def test_mentions_checklist_rule():
 def test_includes_recommendation():
     content = Path("release_decision.md").read_text().lower()
     assert "recommendation" in content, "The output must include a recommendation section"
+
+
+def test_mentions_duplicate_transaction_risk():
+    content = Path("release_decision.md").read_text().lower()
+    assert "duplicate" in content, "The output must mention the duplicate transaction risk"
+    assert "transaction" in content, "The output must mention transaction evidence"
