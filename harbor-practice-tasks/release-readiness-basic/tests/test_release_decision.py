@@ -26,3 +26,8 @@ def test_mentions_open_blocker_issue():
 def test_mentions_checklist_rule():
     content = Path("release_decision.md").read_text().lower()
     assert "checklist" in content or "must not be approved" in content
+
+
+def test_includes_recommendation():
+    content = Path("release_decision.md").read_text().lower()
+    assert "recommendation" in content, "The output must include a recommendation section"
