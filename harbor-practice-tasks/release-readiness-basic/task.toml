@@ -1,0 +1,4 @@
+name = "release-readiness-basic"
+category = "software-release"
+difficulty = "beginner"
+description = "Evaluate whether an AI agent can review release materials and make an evidence-backed release readiness decision."
