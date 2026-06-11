@@ -1,0 +1,11 @@
+CI Summary - Version 2.1
+
+Build: Passed
+Unit tests: Passed
+Login integration tests: Passed
+Payment integration tests: Failed
+Lint checks: Passed
+Deployment dry run: Passed
+
+Failure detail:
+The payment integration test failed when validating duplicate transaction handling.
