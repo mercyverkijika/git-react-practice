@@ -1,0 +1,4 @@
+name = "care-report-quality"
+category = "healthcare-operations"
+difficulty = "beginner-plus"
+description = "Evaluate whether an AI agent can review care visit data quality evidence and decide if a weekly report is ready for management."
