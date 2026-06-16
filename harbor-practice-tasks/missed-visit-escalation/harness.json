@@ -1,0 +1,23 @@
+{
+    "task_name": "missed-visit-escalation",
+    "task_type": "file_creation",
+    "description": "Agent must review visit evidence and create an escalation decision file.",
+    "agent_instruction_file": "instruction.md",
+    "expected_output_file": "escalation_decision.md",
+    "environment_files": [
+      "environment/visit_log.csv",
+      "environment/risk_policy.md",
+      "environment/handover_notes.md"
+    ],
+    "verifier": {
+      "type": "pytest",
+      "test_file": "tests/test_escalation_decision.py",
+      "run_command": "pytest tests/test_escalation_decision.py"
+    },
+    "docker": {
+      "dockerfile": "Dockerfile",
+      "image_name": "missed-visit-task"
+    },
+    "timeout_seconds": 300,
+    "expected_decision": "ESCALATE"
+  }
