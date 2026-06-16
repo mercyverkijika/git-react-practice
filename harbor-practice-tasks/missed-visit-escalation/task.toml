@@ -1,0 +1,4 @@
+name = "missed-visit-escalation"
+category = "healthcare-operations"
+difficulty = "beginner-plus"
+description = "Evaluate whether an AI agent can identify a high-risk missed medication visit and apply escalation policy correctly."

@@ -1,0 +1,7 @@
+visit_id,client_id,carer_id,visit_type,scheduled_time,status,notes
+V011,C201,A31,Personal care,2026-06-03 08:00,Completed,Visit completed with no concerns
+V012,C202,A34,Meal support,2026-06-03 09:00,Completed,Client ate breakfast
+V013,C203,A29,Welfare check,2026-06-03 10:00,Completed,Client well and settled
+V014,C204,A38,Medication support,2026-06-03 11:00,Missed,Carer did not attend
+V015,C205,A36,Personal care,2026-06-03 12:00,Completed,Visit completed
+V016,C206,A40,Companionship,2026-06-03 13:00,Completed,No concerns reported
